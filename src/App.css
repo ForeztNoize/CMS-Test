@@ -21,6 +21,10 @@
   justify-content: center;
 }
 
+#articleContent > img{
+  width: 80%;
+}
+
 /* Styling for the article thumbnails */
 #articleContent{
   background-color:lightgray;
@@ -48,6 +52,10 @@
   #articles{
     width: 100%;
     padding: 0%;
+  }
+
+  #articleContent > img{
+    width: 60%;
   }
 }
 @keyframes App-logo-spin {
