@@ -6,9 +6,8 @@ class ArticlesList extends Component{
     render(){
         return (
             <div id="articles">
-                <h1>Here comes the articles</h1>
                 {ArticleData.map((articleContent, index)=>{
-                    return  <div>
+                    return  <div id="articleContent">
                                 <h1>{articleContent.title}</h1> 
                                 <img src={ArticlePicture}/>
                                 <p>{articleContent.content}</p>    

@@ -13,14 +13,19 @@
   }
 }
 
-/* Styling for the articles */
+/* Styling for the articles wrapper div */
 #articles{
   display: flex;
-  flex-direction: column;
-  padding: 25%;
-  padding-top: 0%;
-  align-items: center;
-  width: 50%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Styling for the article thumbnails */
+#articleContent{
+  background-color:lightgray;
+  margin: 5%;
+  width: 35%;
 }
 
 .App-header {
