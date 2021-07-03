@@ -1,5 +1,4 @@
 import ArticlesList from './Articles/ArticlesList';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {

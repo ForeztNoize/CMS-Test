@@ -13,7 +13,10 @@
   }
 }
 
+/* Styling for the articles */
 #articles{
+  display: flex;
+  flex-direction: column;
   padding: 25%;
   padding-top: 0%;
   align-items: center;
@@ -35,6 +38,7 @@
   color: #61dafb;
 }
 
+/* Media query for mobile devices */
 @media screen and (max-width: 770px) {
   #articles{
     width: 100%;
