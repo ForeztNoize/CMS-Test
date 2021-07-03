@@ -13,6 +13,12 @@
   }
 }
 
+#title{
+  margin-top: 0%;
+  height: 100px;
+  background-color: lightgray;
+}
+
 /* Styling for the articles wrapper div */
 #articles{
   display: flex;
@@ -21,15 +27,21 @@
   justify-content: center;
 }
 
-#articleContent > img{
-  width: 80%;
-}
 
 /* Styling for the article thumbnails */
 #articleContent{
   background-color:lightgray;
   margin: 5%;
   width: 35%;
+}
+
+#articleContent > img{
+  width: 80%;
+}
+#articleContent > p{
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
 }
 
 .App-header {
