@@ -1,5 +1,9 @@
 import { Component } from "react";
+import { increment } from '../actions';
+import { loggingIn } from '../actions/logged';
+import {connect} from 'react-redux';
 class Login extends Component {
+    
     constructor() {
         super();
         this.state = {
@@ -8,6 +12,7 @@ class Login extends Component {
         };
         this.ifChange = this.ifChange.bind(this);
         this.ifSubmit = this.ifSubmit.bind(this);
+        this.success = this.success.bind(this);
       }  
     
       ifChange(event) {
@@ -25,9 +30,13 @@ class Login extends Component {
             let input = {};
             input["name"] = "";
             input["password"] = "";
-            this.setState({input:input});
-            alert('Login Successfull');
+            this.setState({input:input})
+            this.success();
         }
+      }
+
+      success(event){
+          this.props.loggingIn()
       }
     
       validate(){
@@ -46,12 +55,32 @@ class Login extends Component {
     
     render(){
         return(
+            <div>
             <form id="loginForm" onSubmit={this.ifSubmit}>
                 <input type="text" name="name" value={this.state.input.name} onChange={this.ifChange} id="userInput" placeholder="username" />
                 <input type="password" name="password" value={this.state.input.password} onChange={this.ifChange} id="pwdInput" placeholder="Enter password"  />
                 <input type="submit" value="Submit" />
             </form>
+            {this.props.isLogged ? <h1>Only Visible for Administrator</h1> : ''} 
+            </div>
+
         )
     }
+
 };
-export default Login;
+const mapStateToProps = (state) => {
+    return {
+        counter: state.counter,
+        isLogged: state.isLogged
+    }
+}
+  const mapDispatchToProps = () => {
+    return {
+      increment,
+      loggingIn
+    };
+  };
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps()
+  )(Login);

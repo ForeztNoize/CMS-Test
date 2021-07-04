@@ -2,8 +2,6 @@ import ArticlesList from './Articles/ArticlesList';
 import './App.css';
 import Login from './AccountManagement/Login';
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { increment } from './actions';
 import {
   BrowserRouter as Router,
   Switch,
@@ -61,15 +59,9 @@ function Articles() {
 }
 
 function LoginPage() {
-  const counter = useSelector(state => state.counter);
-  const isLogged = useSelector(state => state.isLogged);
-  const dispatch = useDispatch();
   return <div>
     <h1 id="title">A Nice Title for the Web Page</h1>
     <h2>Login</h2>
-    <h1>Counter {counter}</h1>
-    <button onClick={() => dispatch(increment())}>+</button>
-    {isLogged ? <h1>Not Visible</h1> : ''} 
     <Login/>
   </div> 
 
