@@ -1,7 +1,5 @@
 import { Component } from "react";
-
-
-export default class Login extends Component {
+class Login extends Component {
     render(){
         return(
             <form id="loginForm" action="">
@@ -11,4 +9,5 @@ export default class Login extends Component {
             </form>
         )
     }
-}
+};
+export default Login;

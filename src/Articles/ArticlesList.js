@@ -6,12 +6,9 @@ class ArticlesList extends Component{
     constructor (props) {
         super(props);
        this.state = {
-            showContent: true
+            showContent: false
         };
         this.toggleContent = this.toggleContent.bind(this);
-        this.state = {
-            isItemContentVisible: {}
-        };
     }
 
     toggleContent(event){
