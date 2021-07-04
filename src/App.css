@@ -14,9 +14,36 @@
 }
 
 #title{
-  margin-top: 0%;
+  margin-top: 0;
   height: 100px;
-  background-color: lightgray;
+  background-color: #f06292;
+}
+
+ul{
+  display: flex;
+  background-color: #ff94c2;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34%;
+  height: 50px;
+  background-color: #ff94c2;
+}
+
+ul > li:hover {
+  background-color: #ba2d65;
+}
+
+ul > li > * {
+  text-decoration: none;
+  font-size: 150%;
+  color: #000000;
 }
 
 /* Styling for the articles wrapper div */
@@ -30,7 +57,7 @@
 
 /* Styling for the article thumbnails */
 #articleContent{
-  background-color:lightgray;
+  background-color:#ff94c2;
   margin: 5%;
   width: 35%;
 }
@@ -43,6 +70,19 @@
   white-space: nowrap; 
   overflow: hidden;
   text-overflow: ellipsis; 
+}
+
+/* Styling for the login form */
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  align-items: center;
+  margin: auto;
+}
+
+#loginForm > * {
+  margin-top: 10px;
 }
 
 .App-header {

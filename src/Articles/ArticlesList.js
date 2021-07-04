@@ -5,10 +5,13 @@ import ArticlePicture from '../Data/article_pic.jpg';
 class ArticlesList extends Component{
     constructor (props) {
         super(props);
-        this.state = {
+       this.state = {
             showContent: true
         };
         this.toggleContent = this.toggleContent.bind(this);
+        this.state = {
+            isItemContentVisible: {}
+        };
     }
 
     toggleContent(event){
@@ -17,16 +20,16 @@ class ArticlesList extends Component{
             showContent: !this.state.showContent
         })
     }
+   
     render(){
         const {showContent} = this.state;
         return (
             <div id="articles">
                 {ArticleData.map((articleContent, index)=>{
-                    return  <div key={articleContent.id} id="articleContent">
+                    return  <div key={articleContent.id} onClick={this.toggleContent} id="articleContent">
                                 <h1 onClick={this.titleClick}>{articleContent.title}</h1> 
                                 <img src={ArticlePicture}/>
                                 {showContent === true ? <p>{articleContent.content}</p> : ""} 
-                                <button onClick={this.toggleContent}>Toggle Content</button>  
                             </div>
                 })}
             </div>
