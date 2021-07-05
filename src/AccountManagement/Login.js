@@ -26,6 +26,7 @@ class Login extends Component {
         });
       }  
     
+      //Runs upon login attempt to validate and eventually grant access
       ifSubmit(event) {
         event.preventDefault();
         if(this.validate()){
@@ -38,10 +39,12 @@ class Login extends Component {
         }
       }
 
+      //Runs if validation is successfull making the admin interface visible
       success(event){
           this.props.loggingIn()
       }
     
+      //Validates the username and password to see if it matches the admin
       validate(){
           let input = this.state.input;
           let errors = {};
@@ -55,7 +58,7 @@ class Login extends Component {
           });
           return isValid;
       }
-    
+    //Renders form for login and renders a GridList of all users that is only visible if admin login is successfull
     render(){
         return(
             <div>

@@ -11,6 +11,7 @@ class ArticlesList extends Component{
         this.toggleContent = this.toggleContent.bind(this);
     }
 
+    //Toggles the text of all articles
     toggleContent(event){
         event.preventDefault();
         this.setState({
@@ -18,6 +19,7 @@ class ArticlesList extends Component{
         })
     }
    
+    //Renders out the articles and their content from the JSON file
     render(){
         const {showContent} = this.state;
         return (
