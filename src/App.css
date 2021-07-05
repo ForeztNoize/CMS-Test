@@ -54,10 +54,14 @@ ul > li > * {
   justify-content: center;
 }
 
+body{
+  background-color: #ff94c2;
+}
 
 /* Styling for the article thumbnails */
 #articleContent{
-  background-color:#ff94c2;
+  background-color:#f06292;
+  padding: 2%;
   margin: 5%;
   width: 35%;
 }

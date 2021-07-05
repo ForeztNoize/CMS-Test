@@ -1,0 +1,22 @@
+[
+    {
+        "id":1,
+        "name": "admin",
+        "password": "password"
+    },
+    {
+        "id": 2,
+        "name": "Editor 2",
+        "password": "editpwd"
+    },
+    {
+        "id": 3,
+        "name": "Editor 3",
+        "password": "editpwd"
+    },
+    {
+        "id": 4,
+        "name": "Editor 4",
+        "password": "editpwd"
+    }
+]

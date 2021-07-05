@@ -1,7 +1,10 @@
 import { Component } from "react";
 import { increment } from '../actions';
+import UserData from '../Data/users.json';
 import { loggingIn } from '../actions/logged';
 import {connect} from 'react-redux';
+import { GridList } from '@material-ui/core';
+import { GridListTile } from '@material-ui/core';
 class Login extends Component {
     
     constructor() {
@@ -61,7 +64,16 @@ class Login extends Component {
                 <input type="password" name="password" value={this.state.input.password} onChange={this.ifChange} id="pwdInput" placeholder="Enter password"  />
                 <input type="submit" value="Submit" />
             </form>
-            {this.props.isLogged ? <h1>Only Visible for Administrator</h1> : ''} 
+            {this.props.isLogged ? 
+            <GridList cellHeight={260} cols={4}>
+              {UserData.map((tile) => (
+                <GridListTile key={tile.id} cols={1}>
+                  <h1>Username: <br/> {tile.name}</h1>
+                  <p>Password: <br /> {tile.password}</p>
+                </GridListTile>
+              ))}
+            </GridList>
+            : ''} 
             </div>
 
         )

@@ -2,6 +2,9 @@ import '../App.css';
 import { Component } from 'react';
 import ArticleData from '../Data/articles.json';
 import ArticlePicture from '../Data/article_pic.jpg';
+import { GridList } from '@material-ui/core';
+import { GridListTile } from '@material-ui/core';
+import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
 class ArticlesList extends Component{
     constructor (props) {
         super(props);
@@ -29,7 +32,8 @@ class ArticlesList extends Component{
                                 {showContent === true ? <p>{articleContent.content}</p> : ""} 
                             </div>
                 })}
-            </div>
+            </div> 
+
         )
     }
 }
