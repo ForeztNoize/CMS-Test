@@ -55,6 +55,7 @@ function Articles() {
   return <div>
     <h1 id="title">A Nice Title for the Web Page</h1>
     <ArticlesList/>
+    <footer><h1>A nice Footer for the Web Page</h1></footer>
   </div>;
 }
 
